@@ -4,7 +4,6 @@ import {
   AppBar,
   Toolbar,
   Box,
-  Link,
   Button,
   Typography,
   Hidden,
@@ -16,6 +15,9 @@ import {
   Drawer,
 } from "@mui/material";
 
+import "@fontsource/freeman/400.css";
+import "./Navbar.css";
+
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -24,6 +26,10 @@ import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import InfoIcon from "@mui/icons-material/Info";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import CollectionsIcon from "@mui/icons-material/Collections";
+
+import { Link } from "react-router-dom";
+
+import Menu from "../../pages/Menu/Menu";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />;
@@ -43,28 +49,28 @@ export default function Navbar() {
         sx={{
           background: "#EBE9E6",
           height: 100,
-          alignItems: "center",
+
           justifyContent: "center",
         }}
       >
         {/*nadpis+hamburgr*/}
         <Toolbar>
-          <Box>
+          <Box flexGrow={0.5}>
             <IconButton
               sx={{
                 ":hover": {
-                  backgroundColor: "#cdc8c1",
+                  backgroundColor: "inherit",
                 },
               }}
               color="black"
               onClick={onOpenHandler}
             >
-              <MenuIcon />
+              <MenuIcon fontSize="large" />
             </IconButton>
           </Box>
           <Box display={"flex"} alignItems={"center"} gap={1}>
-            <RestaurantIcon sx={{ color: "black" }} />
-            <Typography variant="h3" color={"black"} fontFamily={"cardo"}>
+            {/*<RestaurantIcon sx={{ color: "black" }} fontSize="large" />*/}
+            <Typography variant="h3" color={"black"} fontFamily={"freeman"}>
               ŠTĚPÁNKA
             </Typography>
           </Box>
@@ -84,9 +90,11 @@ export default function Navbar() {
           <Toolbar>
             <Box flexGrow={1}>
               <Box display={"flex"} alignItems={"center"} gap={1}>
+                {/* krizek */}
                 <IconButton
-                  color="inherit"
+                  ccolor="inherit"
                   onClick={onCloseHandler}
+                  fontSize="large"
                   sx={{
                     ":hover": {
                       backgroundColor: "transparent",
@@ -94,27 +102,31 @@ export default function Navbar() {
                     height: 100,
                   }}
                 >
-                  <CloseIcon />
+                  <CloseIcon fontSize="large" />
                 </IconButton>
               </Box>
             </Box>
           </Toolbar>
         </AppBar>
-        <Box py={3}>
+        <Box height={1} sx={{ background: "#EBE9E6" }}>
           <Button
             fullWidth
             color="inherit"
-            sx={{
-              ":hover": { backgroundColor: "transparent" },
-            }}
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
-              paddingTop: "20px",
             }}
           >
-            <RestaurantMenuIcon />
-            <Typography fontFamily={"cardo"}>Jídelní lístek</Typography>
+            <Typography
+              sx={{ color: "black" }}
+              pl={3}
+              fontFamily={"freeman"}
+              fontSize={"xx-large"}
+            >
+              <Link to={"/menu"}>
+                <div className="Navbar-menu-links">Jídelní lístek</div>
+              </Link>
+            </Typography>
           </Button>
 
           <Button
@@ -123,11 +135,11 @@ export default function Navbar() {
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
-              paddingTop: "20px",
             }}
           >
-            <InfoIcon />
-            <Typography fontFamily={"cardo"}>O nás</Typography>
+            <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
+              <div className="Navbar-menu-links">O nás</div>
+            </Typography>
           </Button>
           <Button
             fullWidth
@@ -135,11 +147,11 @@ export default function Navbar() {
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
-              paddingTop: "20px",
             }}
           >
-            <NewspaperIcon />
-            <Typography fontFamily={"cardo"}>Aktuality</Typography>
+            <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
+              <div className="Navbar-menu-links">Aktuality</div>
+            </Typography>
           </Button>
           <Button
             fullWidth
@@ -147,11 +159,11 @@ export default function Navbar() {
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
-              paddingTop: "20px",
             }}
           >
-            <CollectionsIcon />
-            <Typography fontFamily={"cardo"}>Galerie</Typography>
+            <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
+              <div className="Navbar-menu-links">Galerie</div>
+            </Typography>
           </Button>
         </Box>
       </Drawer>
