@@ -29,8 +29,6 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 
 import { Link } from "react-router-dom";
 
-import Menu from "../../pages/Menu/Menu";
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />;
 });
@@ -45,12 +43,11 @@ export default function Navbar() {
   return (
     <>
       <AppBar
-        position="static"
+        position="sticky"
         sx={{
           background: "#EBE9E6",
           height: 100,
-
-          justifyContent: "center",
+          justifyContent: "center"
         }}
       >
         {/*nadpis+hamburgr*/}
@@ -70,9 +67,14 @@ export default function Navbar() {
           </Box>
           <Box display={"flex"} alignItems={"center"} gap={1}>
             {/*<RestaurantIcon sx={{ color: "black" }} fontSize="large" />*/}
-            <Typography variant="h3" color={"black"} fontFamily={"freeman"}>
-              ŠTĚPÁNKA
-            </Typography>
+            <Box textAlign={"center"}>
+              <Typography variant="h5" color={"black"} fontFamily={"freeman"}>
+                RESTAURACE
+              </Typography>
+              <Typography variant="h3" color={"black"} fontFamily={"freeman"}>
+                ŠTĚPÁNKA
+              </Typography>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
@@ -82,6 +84,7 @@ export default function Navbar() {
         TransitionComponent={Transition}
         open={open}
         PaperProps={{ sx: { width: 300 } }}
+        onClick={onCloseHandler}
       >
         <AppBar
           position="static"
@@ -109,6 +112,25 @@ export default function Navbar() {
           </Toolbar>
         </AppBar>
         <Box height={1} sx={{ background: "#EBE9E6" }}>
+          <Link to={"/"} >
+            <Button
+              fullWidth
+              color="inherit"
+              onClick={onCloseHandler}
+              style={{
+                justifyContent: "flex-start",
+              }}
+            >
+              <Typography
+                sx={{ color: "black" }}
+                pl={3}
+                fontFamily={"freeman"}
+                fontSize={"xx-large"}
+              >
+                <div className="Navbar-menu-links">Domů</div>
+              </Typography>
+            </Button>
+          </Link>
           <Button
             fullWidth
             color="inherit"

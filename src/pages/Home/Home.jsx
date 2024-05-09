@@ -7,6 +7,7 @@ export default function Home() {
       <Navbar />
       <img width={"100%"} src={"./src/images/stepanka-bluda-1280x720.png"} />
       <AboutUs />
+      <AboutUs />
     </>
   );
 }

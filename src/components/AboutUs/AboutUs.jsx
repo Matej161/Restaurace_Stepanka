@@ -19,10 +19,10 @@ import {
 export default function AboutUs() {
   return (
     <>
-      <Grid container>
+      <Grid container sx={{background: "black"}}>
         <Grid xs={12} md={6}>
           <Box>
-            <img width={"100%"} src={"./src/images/home-menu-img.jpg"} />
+            <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
           </Box>
         </Grid>
         <Grid xs={12} md={6}>
@@ -35,6 +35,7 @@ export default function AboutUs() {
           </Box>
         </Grid>
       </Grid>
+      <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
     </>
   );
 }
