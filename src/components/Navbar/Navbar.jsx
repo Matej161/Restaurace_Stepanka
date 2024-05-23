@@ -112,7 +112,7 @@ export default function Navbar() {
           </Toolbar>
         </AppBar>
         <Box height={1} sx={{ background: "#EBE9E6" }}>
-          <Link to={"/"} >
+          <Link to={"/"}  >
             <Button
               fullWidth
               color="inherit"
@@ -120,6 +120,9 @@ export default function Navbar() {
               style={{
                 justifyContent: "flex-start",
               }}
+              sx={{":active": {
+                bgcolor: "gray",
+              }}}
             >
               <Typography
                 sx={{ color: "black" }}

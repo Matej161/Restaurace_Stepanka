@@ -20,12 +20,69 @@ import "./AboutUs.css";
 export default function AboutUs() {
   return (
     <>
+    
+    <Grid container sx={{ background: "black" }}>
+       
+       
+       <Grid bgcolor={"#dadada"} xs={12} md={6}>
+         <Box>
+           <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
+         </Box>
+       </Grid>
+       <Grid
+         xs={12}
+         md={6}
+         container
+         alignItems={"center"}
+         sx={{ background: "white" }}
+         pl={3}
+         justifyContent={"center"}
+       >
+         <Box mr={20} ml={20}>
+           <Typography variant="h1" fontFamily={"freeman"}>
+             Menu
+           </Typography>
+           <Typography sx={{fontSize: "x-large", color: "gray"} }  >
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+             nesciunt, possimus quas accusamus saepe neque laudantium error
+             numquam cum repudiandae perspiciatis molestias aspernatur natus
+             doloremque sequi nemo quibusdam vero veniam.
+           </Typography>
+           <Box  mt={2}>
+             {" "}
+             <Button
+               sx={{
+                 ":hover": {
+                   bgcolor: "black",
+                   color: "white",
+                   border: "black",
+                   border: 2
+                 },
+                 ":active": {
+                   bgcolor: "black",
+                   color: "white"
+                 },
+                 bgcolor: "white",
+                fontSize: "xx-large",
+                color: "black",
+                paddingLeft: 12,
+                paddingRight: 12,
+                paddingTop: 0.2,
+                paddingBottom: 0.2,
+                border: 2
+               }}
+             
+             >
+               Více
+             </Button>
+            
+           </Box>
+         </Box>
+       </Grid>
+     </Grid>
+
       <Grid container sx={{ background: "black" }}>
-        <Grid bgcolor={"#dadada"} xs={12} md={6}>
-          <Box>
-            <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
-          </Box>
-        </Grid>
+       
         <Grid
           xs={12}
           md={6}
@@ -35,38 +92,55 @@ export default function AboutUs() {
           pl={3}
           justifyContent={"center"}
         >
-          <Box>
-            <Typography variant="h4" fontFamily={"freeman"}>
-              MENU
+          <Box mr={20} ml={20}>
+            <Typography variant="h1" fontFamily={"freeman"}>
+              O nás
             </Typography>
-            <Typography variant="body1" fontFamily={"freeman"}>
+            <Typography sx={{fontSize: "x-large", color: "gray"} }  >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
               nesciunt, possimus quas accusamus saepe neque laudantium error
               numquam cum repudiandae perspiciatis molestias aspernatur natus
               doloremque sequi nemo quibusdam vero veniam.
             </Typography>
-            <Box ml={2} mt={2}>
+            <Box  mt={2}>
               {" "}
-              {/*<Button
+              <Button
                 sx={{
                   ":hover": {
-                    bgcolor: "green",
+                    bgcolor: "black",
                     color: "white",
+                    border: "black",
+                    border: 2
                   },
                   ":active": {
-                    bgcolor: "yellow",
+                    bgcolor: "black",
+                    color: "white"
                   },
-                  bgcolor: "#dadada",
+                  bgcolor: "white",
+                 fontSize: "xx-large",
+                 color: "black",
+                 paddingLeft: 12,
+                 paddingRight: 12,
+                 paddingTop: 0.2,
+                 paddingBottom: 0.2,
+                 border: 2
                 }}
+              
               >
-                AHOJ
-              </Button>*/}
-              <button id="menu-button"> Button </button>
+                Více
+              </Button>
+             
             </Box>
           </Box>
         </Grid>
+        <Grid bgcolor={"#dadada"} xs={12} md={6}>
+          <Box>
+            <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
+          </Box>
+        </Grid>
       </Grid>
-      <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
+      
+      
     </>
   );
 }

@@ -13,18 +13,14 @@
   font-size: 17px;
   border-radius: 500px;
   overflow: hidden;
-  background: red;
-  color: white;
-}
-
-#menu-button {
-  position: relative;
+  background: rgb(182, 170, 170);
+  color: white; /* Ensure the text is white before hover */
   z-index: 10;
   transition: color 0.4s;
 }
 
 #menu-button:hover {
-  color: blue;
+  color: rgb(0, 0, 0); /* Change text color to black on hover */
 }
 
 #menu-button::before,
@@ -39,7 +35,7 @@
 
 #menu-button::before {
   content: "";
-  background: green;
+  background: rgb(0, 0, 0);
   width: 120%;
   left: -10%;
   transform: skew(30deg);
