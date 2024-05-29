@@ -45,33 +45,34 @@ export default function Navbar() {
       <AppBar
         position="sticky"
         sx={{
-          background: "#EBE9E6",
+          background: "#074f71",
           height: 100,
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         {/*nadpis+hamburgr*/}
         <Toolbar>
-          <Box flexGrow={0.5}>
+          <Box flexGrow={0.48}>
             <IconButton
               sx={{
                 ":hover": {
                   backgroundColor: "inherit",
                 },
+                color: "white"
               }}
-              color="black"
+              
               onClick={onOpenHandler}
             >
               <MenuIcon fontSize="large" />
             </IconButton>
           </Box>
-          <Box display={"flex"} alignItems={"center"} gap={1}>
+          <Box display={"flex"} alignItems={"center"}>
             {/*<RestaurantIcon sx={{ color: "black" }} fontSize="large" />*/}
             <Box textAlign={"center"}>
-              <Typography variant="h5" color={"black"} fontFamily={"freeman"}>
+              <Typography variant="h5" color={"white"} fontFamily={"freeman"}>
                 RESTAURACE
               </Typography>
-              <Typography variant="h3" color={"black"} fontFamily={"freeman"}>
+              <Typography variant="h3" color={"white"} fontFamily={"freeman"}>
                 ŠTĚPÁNKA
               </Typography>
             </Box>
@@ -88,20 +89,24 @@ export default function Navbar() {
       >
         <AppBar
           position="static"
-          sx={{ background: "#EBE9E6", color: "black" }}
+          sx={{ background: "#074f71", color: "black" }}
         >
           <Toolbar>
             <Box flexGrow={1}>
               <Box display={"flex"} alignItems={"center"} gap={1}>
                 {/* krizek */}
                 <IconButton
-                  ccolor="inherit"
+                 
                   onClick={onCloseHandler}
                   fontSize="large"
+                  color="inherit"
                   sx={{
+                    color: "white",
                     ":hover": {
                       backgroundColor: "transparent",
+                      
                     },
+                    
                     height: 100,
                   }}
                 >
@@ -111,21 +116,24 @@ export default function Navbar() {
             </Box>
           </Toolbar>
         </AppBar>
-        <Box height={1} sx={{ background: "#EBE9E6" }}>
-          <Link to={"/"}  >
+        <Box height={1} sx={{ background: "#074f71" }}>
+          <Link to={"/"}>
             <Button
               fullWidth
-              color="inherit"
+              
               onClick={onCloseHandler}
               style={{
                 justifyContent: "flex-start",
               }}
-              sx={{":active": {
-                bgcolor: "gray",
-              }}}
+              sx={{
+                color: "white",
+                ":active": {
+                  
+                },
+              }}
             >
               <Typography
-                sx={{ color: "black" }}
+                sx={{ color: "white" }}
                 pl={3}
                 fontFamily={"freeman"}
                 fontSize={"xx-large"}
@@ -134,29 +142,31 @@ export default function Navbar() {
               </Typography>
             </Button>
           </Link>
+          <Link to={"/menu"}>
           <Button
             fullWidth
-            color="inherit"
+            sx={{color: "white"}}
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
             }}
           >
             <Typography
-              sx={{ color: "black" }}
+              sx={{ color: "white" }}
               pl={3}
               fontFamily={"freeman"}
               fontSize={"xx-large"}
             >
-              <Link to={"/menu"}>
+              
                 <div className="Navbar-menu-links">Jídelní lístek</div>
-              </Link>
+              
             </Typography>
           </Button>
+          </Link>
 
           <Button
             fullWidth
-            color="inherit"
+            sx={{color: "white"}}
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
@@ -168,7 +178,7 @@ export default function Navbar() {
           </Button>
           <Button
             fullWidth
-            color="inherit"
+            sx={{color: "white"}}
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",
@@ -180,7 +190,7 @@ export default function Navbar() {
           </Button>
           <Button
             fullWidth
-            color="inherit"
+            sx={{color: "white"}}
             onClick={onCloseHandler}
             style={{
               justifyContent: "flex-start",

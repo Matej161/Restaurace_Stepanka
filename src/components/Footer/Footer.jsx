@@ -15,53 +15,26 @@ import {
   Drawer,
 } from "@mui/material";
 
-
-
 export default function Footer() {
   return (
-    <>      <Grid container sx={{ background: "black" }}>
-
-
-<Grid
-        xs={12}
-        md={4}
-        container
-        alignItems={"center"}
-        sx={{ background: "#dadada" }}
-        pl={3}
-        justifyContent={"center"}
-      >
-        <Box mt={2}>
-        <Typography variant="h2" fontFamily={"freeman"}> KONTAKT JJ</Typography>
-        </Box>
+    <>
+      <Grid container sx={{ background: "black" }}>
+        <Grid
+          xs={12}
+          md={12}
+          container
+          alignItems={"center"}
+          sx={{ background: "white" }}
+          pl={3}
+          justifyContent={"center"}
+        >
+          <Box mt={2}>
+            <Typography variant="h2" fontFamily={"freeman"}>
+                
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
-      <Grid
-        xs={12}
-        md={4}
-        container
-        alignItems={"center"}
-        sx={{ background: "#dadada" }}
-        pl={3}
-        justifyContent={"center"}
-      >
-        
-        <Box mt={2}>
-        <Typography variant="h2" fontFamily={"freeman"}> KONTAKT JJ</Typography>
-        </Box>
-      </Grid>
-      <Grid
-        xs={12}
-        md={4}
-        container
-        alignItems={"center"}
-        sx={{ background: "#dadada" }}
-        pl={3}
-        justifyContent={"center"}
-      >
-        <Box mt={2}>
-        <Typography variant="h2" fontFamily={"freeman"}> KONTAKT JJ</Typography>
-        </Box>
-      </Grid>
-    </Grid></>
-  )
+    </>
+  );
 }
