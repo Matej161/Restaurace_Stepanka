@@ -70,11 +70,11 @@ button:focus-visible {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(40, 40, 40);
+  background: #ebe9e6;
   box-shadow: #ebe9e6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ebe9e6;
+  background: #074f71;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {

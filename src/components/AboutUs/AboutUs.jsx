@@ -36,10 +36,10 @@ export default function AboutUs() {
           justifyContent={"center"}
         >
           <Box mr={20} ml={20}>
-            <Typography variant="h2" fontFamily={"freeman"}>
+            <Typography sx={{ color: "#074f71"}}  variant="h2" fontFamily={"freeman"}>
               Menu
             </Typography>
-            <Typography sx={{ fontSize: "x-large", color: "gray" }}>
+            <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
               nesciunt, possimus quas accusamus saepe neque laudantium error
               numquam cum repudiandae perspiciatis molestias aspernatur natus
@@ -89,10 +89,10 @@ export default function AboutUs() {
           justifyContent={"center"}
         >
           <Box mr={20} ml={20}>
-            <Typography variant="h1" fontFamily={"freeman"}>
+            <Typography sx={{ color: "#074f71"}} variant="h1" fontFamily={"freeman"}>
               O nás
             </Typography>
-            <Typography sx={{ fontSize: "x-large", color: "gray" }}>
+            <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
               nesciunt, possimus quas accusamus saepe neque laudantium error
               numquam cum repudiandae perspiciatis molestias aspernatur natus
