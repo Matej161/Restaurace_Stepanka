@@ -39,10 +39,10 @@ export default function Navbar() {
         <Toolbar>
           <Box
             sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              width: '100%'
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
             }}
           >
             <IconButton
@@ -50,7 +50,7 @@ export default function Navbar() {
                 ":hover": {
                   backgroundColor: "inherit",
                 },
-                color: "white"
+                color: "white",
               }}
               onClick={onOpenHandler}
             >
@@ -110,6 +110,7 @@ export default function Navbar() {
               }}
               sx={{
                 color: "white",
+                ":hover": {},
               }}
             >
               <Typography
@@ -154,7 +155,7 @@ export default function Navbar() {
               <div className="Navbar-menu-links">O nás</div>
             </Typography>
           </Button>
-          <Button
+          {/*<Button
             fullWidth
             sx={{ color: "white" }}
             onClick={onCloseHandler}
@@ -165,7 +166,7 @@ export default function Navbar() {
             <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
               <div className="Navbar-menu-links">Aktuality</div>
             </Typography>
-          </Button>
+          </Button> */}
           <Button
             fullWidth
             sx={{ color: "white" }}

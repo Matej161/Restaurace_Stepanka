@@ -25,7 +25,6 @@ export default function Menu() {
       transition: "0.3s ease",
     },
     cursor: "pointer",
-
   };
 
   const overlayStyles = {
@@ -46,30 +45,67 @@ export default function Menu() {
   return (
     <>
       <Navbar />
-      <Grid container>
-        <Grid container xs={12} md={6} lg={6} xl={4} sx={{ ...gridItemStyles, backgroundImage: "url('./src/images/download (1).png')" }}>
+      <Grid container bgcolor={"black"}>
+        <Grid
+          container
+          xs={12}
+          md={6}
+          lg={6}
+          xl={4}
+          sx={{
+            ...gridItemStyles,
+            backgroundImage: "url('./src/images/rizek.jpg')",
+          }}
+        >
           <Box sx={overlayStyles}></Box>
           <Typography variant="h3" sx={textStyles}>
             TÝDENNÍ NABÍDKA
           </Typography>
         </Grid>
-        <Grid container xs={12} md={6} lg={6} xl={4} sx={{ ...gridItemStyles, backgroundImage: "url('./src/images/download (1).png')" }}>
+        <Grid
+          container
+          xs={12}
+          md={6}
+          lg={6}
+          xl={4}
+          sx={{
+            ...gridItemStyles,
+            backgroundImage: "url('./src/images/toast.jpeg')",
+          }}
+        >
           <Box sx={overlayStyles}></Box>
           <Typography variant="h3" sx={textStyles}>
             STÁLÁ NABÍDKA
           </Typography>
         </Grid>
-        <Grid container xs={12} md={12} lg={12} xl={4} sx={{ ...gridItemStyles, backgroundImage: "url('./src/images/moderni_jidlo.jpg')" }}>
+        <Grid
+          container
+          xs={12}
+          md={12}
+          lg={12}
+          xl={4}
+          sx={{
+            ...gridItemStyles,
+            backgroundImage: "url('./src/images/coffee.jpg')",
+          }}
+        >
           <Box sx={overlayStyles}></Box>
           <Typography variant="h3" sx={textStyles}>
             NÁPOJE
           </Typography>
         </Grid>
-        
       </Grid>
-      <Typography pt={"5px"} variant="h3" color={"black"} fontFamily={"freeman"} textAlign={"center"}>
-        08:00 - 11:00
-      </Typography>
+      <Grid>
+        <Typography
+          pt={"5px"}
+          variant="h3"
+          color={"#074f71"}
+          fontFamily={"freeman"}
+          textAlign={"center"}
+        >
+          TÝDENNÍ NABÍDKA
+        </Typography>
+      </Grid>
     </>
   );
 }

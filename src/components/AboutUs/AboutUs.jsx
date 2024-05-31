@@ -4,7 +4,6 @@ import {
   AppBar,
   Toolbar,
   Box,
-  Link,
   Button,
   Typography,
   Hidden,
@@ -16,6 +15,7 @@ import {
   Drawer,
 } from "@mui/material";
 import "./AboutUs.css";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   return (
@@ -36,7 +36,11 @@ export default function AboutUs() {
           justifyContent={"center"}
         >
           <Box mr={20} ml={20}>
-            <Typography sx={{ color: "#074f71"}}  variant="h2" fontFamily={"freeman"}>
+            <Typography
+              sx={{ color: "#074f71" }}
+              variant="h2"
+              fontFamily={"freeman"}
+            >
               Menu
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
@@ -47,32 +51,33 @@ export default function AboutUs() {
             </Typography>
             <Box mt={2}>
               {" "}
-              <Button
-                sx={{
-                  ":hover": {
-                    bgcolor: "#074f71",
-                    color: "white",
-                    border: "#074f71",
+              <Link to={"/menu"}>
+                <Button
+                  sx={{
+                    ":hover": {
+                      bgcolor: "#074f71",
+                      color: "white",
+                      borderColor: "#074f71",
+                      border: 2,
+                    },
+                    ":active": {
+                      bgcolor: "#074f71",
+                    },
+                    bgcolor: "white",
+                    fontSize: "x-large",
+                    color: "#074f71",
+                    paddingLeft: 8,
+                    paddingRight: 8,
+                    paddingTop: 0.2,
+                    paddingBottom: 0.2,
                     border: 2,
-                  },
-                  ":active": {
-                    bgcolor: "black",
-                    color: "white",
-                  },
-                  bgcolor: "white",
-                  fontSize: "xx-large",
-                  color: "#074f71",
-                  paddingLeft: 8,
-                  paddingRight: 8,
-                  paddingTop: 0.2,
-                  paddingBottom: 0.2,
-                  border: 2,
-                  borderColor: "#074f71",
-                  marginBottom: 2,
-                }}
-              >
-                Více
-              </Button>
+                    borderColor: "#074f71",
+                    marginBottom: 2,
+                  }}
+                >
+                  Více
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
@@ -89,7 +94,11 @@ export default function AboutUs() {
           justifyContent={"center"}
         >
           <Box mr={20} ml={20}>
-            <Typography sx={{ color: "#074f71"}} variant="h1" fontFamily={"freeman"}>
+            <Typography
+              sx={{ color: "#074f71" }}
+              variant="h2"
+              fontFamily={"freeman"}
+            >
               O nás
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
@@ -100,37 +109,102 @@ export default function AboutUs() {
             </Typography>
             <Box mt={2}>
               {" "}
-              <Button
-                sx={{
-                  ":hover": {
-                    bgcolor: "black",
-                    color: "white",
-                    border: "black",
+              <Link to={"/Onas"}>
+                <Button
+                  sx={{
+                    ":hover": {
+                      bgcolor: "#074f71",
+                      color: "white",
+                      border: "#074f71",
+                      border: 2,
+                    },
+                    ":active": {
+                      bgcolor: "#074f71",
+                    },
+                    bgcolor: "white",
+                    fontSize: "x-large",
+                    color: "#074f71",
+                    paddingLeft: 8,
+                    paddingRight: 8,
+                    paddingTop: 0.2,
+                    paddingBottom: 0.2,
                     border: 2,
-                  },
-                  ":active": {
-                    bgcolor: "black",
-                    color: "white",
-                  },
-                  bgcolor: "white",
-                  fontSize: "xx-large",
-                  color: "black",
-                  paddingLeft: 12,
-                  paddingRight: 12,
-                  paddingTop: 0.2,
-                  paddingBottom: 0.2,
-                  border: 2,
-                  marginBottom: 2,
-                }}
-              >
-                Více
-              </Button>
+                    borderColor: "#074f71",
+                    marginBottom: 2,
+                  }}
+                >
+                  Více
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
         <Grid bgcolor={"#dadada"} xs={12} md={6}>
           <Box>
+            <img width={"100%"} src={"./src/images/pani-onas.jpg"} />
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Grid container sx={{ background: "black" }}>
+        <Grid bgcolor={"#dadada"} xs={12} md={6}>
+          <Box>
             <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
+          </Box>
+        </Grid>
+        <Grid
+          xs={12}
+          md={6}
+          container
+          alignItems={"center"}
+          sx={{ background: "white" }}
+          pl={3}
+          justifyContent={"center"}
+        >
+          <Box mr={20} ml={20}>
+            <Typography
+              sx={{ color: "#074f71" }}
+              variant="h2"
+              fontFamily={"freeman"}
+            >
+              Galerie
+            </Typography>
+            <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+              nesciunt, possimus quas accusamus saepe neque laudantium error
+              numquam cum repudiandae perspiciatis molestias aspernatur natus
+              doloremque sequi nemo quibusdam vero veniam.
+            </Typography>
+            <Box mt={2}>
+              {" "}
+              <Link to={"/menu"}>
+                <Button
+                  sx={{
+                    ":hover": {
+                      bgcolor: "#074f71",
+                      color: "white",
+                      borderColor: "#074f71",
+                      border: 2,
+                    },
+                    ":active": {
+                      bgcolor: "#074f71",
+                    },
+                    bgcolor: "white",
+                    fontSize: "x-large",
+                    color: "#074f71",
+                    paddingLeft: 8,
+                    paddingRight: 8,
+                    paddingTop: 0.2,
+                    paddingBottom: 0.2,
+                    border: 2,
+                    borderColor: "#074f71",
+                    marginBottom: 2,
+                  }}
+                >
+                  Více
+                </Button>
+              </Link>
+            </Box>
           </Box>
         </Grid>
       </Grid>
