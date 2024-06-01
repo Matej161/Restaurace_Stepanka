@@ -177,7 +177,7 @@ export default function AboutUs() {
             </Typography>
             <Box mt={2}>
               {" "}
-              <Link to={"/menu"}>
+              <Link to={"/galerie"}>
                 <Button
                   sx={{
                     ":hover": {

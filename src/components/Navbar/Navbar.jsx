@@ -56,14 +56,16 @@ export default function Navbar() {
             >
               <MenuIcon fontSize="large" />
             </IconButton>
-            <Box textAlign={"center"}>
-              <Typography variant="h5" color={"white"} fontFamily={"freeman"}>
-                RESTAURACE
-              </Typography>
-              <Typography variant="h3" color={"white"} fontFamily={"freeman"}>
-                ŠTĚPÁNKA
-              </Typography>
-            </Box>
+            <Link to={"/"}>
+              <Box textAlign={"center"}>
+                <Typography variant="h5" color={"white"} fontFamily={"freeman"}>
+                  RESTAURACE
+                </Typography>
+                <Typography variant="h3" color={"white"} fontFamily={"freeman"}>
+                  ŠTĚPÁNKA
+                </Typography>
+              </Box>
+            </Link>
             <Box sx={{ width: 48 }} /> {/* Empty box to balance the space */}
           </Box>
         </Toolbar>
@@ -142,19 +144,20 @@ export default function Navbar() {
               </Typography>
             </Button>
           </Link>
-
-          <Button
-            fullWidth
-            sx={{ color: "white" }}
-            onClick={onCloseHandler}
-            style={{
-              justifyContent: "flex-start",
-            }}
-          >
-            <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
-              <div className="Navbar-menu-links">O nás</div>
-            </Typography>
-          </Button>
+          <Link to={"/onas"}>
+            <Button
+              fullWidth
+              sx={{ color: "white" }}
+              onClick={onCloseHandler}
+              style={{
+                justifyContent: "flex-start",
+              }}
+            >
+              <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
+                <div className="Navbar-menu-links">O nás</div>
+              </Typography>
+            </Button>
+          </Link>
           {/*<Button
             fullWidth
             sx={{ color: "white" }}
@@ -167,18 +170,20 @@ export default function Navbar() {
               <div className="Navbar-menu-links">Aktuality</div>
             </Typography>
           </Button> */}
-          <Button
-            fullWidth
-            sx={{ color: "white" }}
-            onClick={onCloseHandler}
-            style={{
-              justifyContent: "flex-start",
-            }}
-          >
-            <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
-              <div className="Navbar-menu-links">Galerie</div>
-            </Typography>
-          </Button>
+          <Link to={"/galerie"}>
+            <Button
+              fullWidth
+              sx={{ color: "white" }}
+              onClick={onCloseHandler}
+              style={{
+                justifyContent: "flex-start",
+              }}
+            >
+              <Typography pl={3} fontFamily={"freeman"} fontSize={"xx-large"}>
+                <div className="Navbar-menu-links">Galerie</div>
+              </Typography>
+            </Button>
+          </Link>
         </Box>
       </Drawer>
     </>
