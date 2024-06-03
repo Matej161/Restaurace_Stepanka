@@ -21,14 +21,24 @@ export default function AboutUs() {
   return (
     <>
       <Grid container sx={{ background: "black" }}>
-        <Grid bgcolor={"#dadada"} xs={12} md={6}>
-          <Box>
-            <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
-          </Box>
-        </Grid>
         <Grid
+          item
+          bgcolor={"#dadada"}
           xs={12}
           md={6}
+          order={{ xs: 2, md: 2 }}
+          sx={{
+            backgroundImage: "url('./src/images/moderni_jidlo.jpg')",
+            height: 900,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          order={{ xs: 1, md: 2 }}
           container
           alignItems={"center"}
           sx={{ background: "white" }}
@@ -44,13 +54,11 @@ export default function AboutUs() {
               Menu
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-              nesciunt, possimus quas accusamus saepe neque laudantium error
-              numquam cum repudiandae perspiciatis molestias aspernatur natus
-              doloremque sequi nemo quibusdam vero veniam.
+              Prohlédněte si náš jídelní lístek a objevte skvělou nabídku pokrmů připravených z nejčerstvějších surovin.
+              Každé jídlo je mistrovským dílem našich kuchařů, kteří se starají o vaši spokojenost.
             </Typography>
             <Box mt={2}>
-              {" "}
+
               <Link to={"/menu"}>
                 <Button
                   sx={{
@@ -85,8 +93,10 @@ export default function AboutUs() {
 
       <Grid container sx={{ background: "black" }}>
         <Grid
+          item
           xs={12}
           md={6}
+          order={{ xs: 1, md: 2 }}
           container
           alignItems={"center"}
           sx={{ background: "white" }}
@@ -102,10 +112,7 @@ export default function AboutUs() {
               O nás
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-              nesciunt, possimus quas accusamus saepe neque laudantium error
-              numquam cum repudiandae perspiciatis molestias aspernatur natus
-              doloremque sequi nemo quibusdam vero veniam.
+              Prozkoumejte více o restauraci Štěpánka.
             </Typography>
             <Box mt={2}>
               {" "}
@@ -139,22 +146,41 @@ export default function AboutUs() {
             </Box>
           </Box>
         </Grid>
-        <Grid bgcolor={"#dadada"} xs={12} md={6}>
-          <Box>
-            <img width={"100%"} src={"./src/images/pani-onas.jpg"} />
-          </Box>
+        <Grid
+          item
+          padding={0}
+          xs={12}
+          md={6}
+          order={{ xs: 2, md: 2 }}
+          sx={{
+            backgroundImage: "url('./src/images/pani-onas.jpg')",
+            height: 800,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}>
+
         </Grid>
       </Grid>
 
       <Grid container sx={{ background: "black" }}>
-        <Grid bgcolor={"#dadada"} xs={12} md={6}>
-          <Box>
-            <img width={"100%"} src={"./src/images/moderni_jidlo.jpg"} />
-          </Box>
-        </Grid>
         <Grid
+          item
+          bgcolor={"#dadada"}
           xs={12}
           md={6}
+          order={{ xs: 2, md: 2 }}
+          sx={{
+            backgroundImage: "url('./src/images/moderni_jidlo.jpg')",
+            height: 900,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          order={{ xs: 1, md: 2 }}
           container
           alignItems={"center"}
           sx={{ background: "white" }}
@@ -170,10 +196,9 @@ export default function AboutUs() {
               Galerie
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-              nesciunt, possimus quas accusamus saepe neque laudantium error
-              numquam cum repudiandae perspiciatis molestias aspernatur natus
-              doloremque sequi nemo quibusdam vero veniam.
+              Objevte naše obrázky a ponořte se do světa lahodné gastronomie a příjemné atmosféry.
+              Naše fotogalerie vám umožní nahlédnout do naší restaurace z pohodlí vašeho domova
+              a získat inspiraci pro svou další návštěvu.
             </Typography>
             <Box mt={2}>
               {" "}
@@ -208,6 +233,7 @@ export default function AboutUs() {
           </Box>
         </Grid>
       </Grid>
+
     </>
   );
 }
