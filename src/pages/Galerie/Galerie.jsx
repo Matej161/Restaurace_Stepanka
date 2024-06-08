@@ -84,7 +84,7 @@ export default function Galerie() {
             justifyContent: 'center'
           }}>
           <Grid item xs={12}>
-            <Typography className='galerie-nadpis' /*variant='h2' fontFamily={"freeman"} color={'black'}*/>Galerie</Typography>
+            <Typography fontSize={"50px"} className='galerie-nadpis'>Galerie</Typography>
           </Grid>
           {images.map((image, index) => (
             <Grid

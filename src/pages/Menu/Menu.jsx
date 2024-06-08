@@ -103,7 +103,34 @@ export default function Menu() {
           fontFamily={"freeman"}
           textAlign={"center"}
         >
-          TÝDENNÍ NABÍDKA
+          STÁLÁ NABÍDKA
+        </Typography>
+        <Typography
+          pt={"5px"}
+          variant="h4"
+          color={"#074f71"}
+          fontFamily={"freeman"}
+          textAlign={"center"}
+        >
+          08:00 - 11:00
+        </Typography>
+        <Typography
+          color={"#074f71"}
+          textAlign={"center"}
+          mt={"7px"}
+          fontFamily={"roboto"}
+          variant="h6"
+          sx={{ borderTop: 1,
+                borderColor: "#074f71"
+           }}
+        >
+          Vejce se šunkou, salátek, pečivo, máslo <br />  119,- <br />
+          Studený toast s avokádovou guacamole salsou, microgreens <br />  59,- <br />
+          Studený toast se sýrovou pomazánkou a uzeným lososem <br /> 79,- <br />
+          Teplý toast ala štrůdl-zapečený s jablkem a skořicovým cukrem <br /> 59,- <br />
+          Teplý nebo studený toast klasik šunka od kosti, gouda, máslo, salátek <br /> 65,- <br />
+          Studený sendvič s kozím sýrem, rukolou a červenou řepou <br /> 79,- <br />
+
         </Typography>
       </Grid>
     </>
