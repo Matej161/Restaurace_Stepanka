@@ -1,0 +1,6 @@
+.menu-border {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, white, white, #074f71, white, white);
+  border-image-slice: 1;
+  border-radius: 10px;
+}

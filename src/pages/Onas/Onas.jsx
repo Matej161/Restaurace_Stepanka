@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import {
@@ -19,8 +19,8 @@ import {
 export default function Onas() {
   return (
     <>
-    <Navbar />
-    <Grid container sx={{ background: "black" }}>
+      <Navbar />
+      <Grid container sx={{ background: "black" }}>
         <Grid
           item
           bgcolor={"#dadada"}
@@ -31,9 +31,9 @@ export default function Onas() {
             backgroundImage: "url('./src/images/moderni_jidlo.jpg')",
             height: 900,
             backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}>
-        </Grid>
+            backgroundPosition: "center",
+          }}
+        ></Grid>
         <Grid
           item
           xs={12}
@@ -51,18 +51,14 @@ export default function Onas() {
               variant="h2"
               fontFamily={"freeman"}
             >
-              Menu
+              O nás
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
-              Prohlédněte si náš jídelní lístek a objevte skvělou nabídku pokrmů připravených z nejčerstvějších surovin.
-              Každé jídlo je mistrovským dílem našich kuchařů, kteří se starají o vaši spokojenost.
+              Nově otevřená moderní restaurace v netradičních prostorech.
+              Nachází se ve 3. patře nové budovy Kliniky Dr. Pírka, přináší
+              nádherný výhled na lesopark Štěpánka a potok Klenice.
             </Typography>
-            <Box mt={2}>
-
-              
-               
-              
-            </Box>
+            <Box mt={2}></Box>
           </Box>
         </Grid>
       </Grid>
@@ -89,11 +85,7 @@ export default function Onas() {
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
               Prozkoumejte více o restauraci Štěpánka.
             </Typography>
-            <Box mt={2}>
-              {" "}
-              
-                
-            </Box>
+            <Box mt={2}> </Box>
           </Box>
         </Grid>
         <Grid
@@ -103,16 +95,14 @@ export default function Onas() {
           md={6}
           order={{ xs: 2, md: 2 }}
           sx={{
-            backgroundImage: "url('./src/images/pani-onas.jpg')",
+            backgroundImage: "url('./src/images/downi.jpg')",
             height: 800,
             backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}>
-
-        </Grid>
+            backgroundPosition: "center",
+          }}
+        ></Grid>
       </Grid>
-      <Footer/>
-
+      <Footer />
     </>
-  )
+  );
 }
