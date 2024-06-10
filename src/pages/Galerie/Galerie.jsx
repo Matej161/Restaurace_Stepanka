@@ -27,13 +27,13 @@ export default function Galerie() {
     { src: "./src/images/FotkaJ7.png" },
     { src: "./src/images/FotkaJ8.png" },
     { src: "./src/images/FotkaJ9.png" },
-    { src: "./src/images/toast.jpeg" },
-    { src: "./src/images/toast.jpeg" },
-    { src: "./src/images/toast.jpeg" },
-    { src: "./src/images/toast.jpeg" },
-    { src: "./src/images/toast.jpeg" },
-    { src: "./src/images/toast.jpeg" },
-    { src: "./src/images/toast.jpeg" },
+    { src: "./src/images/FotkaJ10.png" },
+    { src: "./src/images/FotkaJ11.png" },
+    { src: "./src/images/FotkaJ12.png" },
+    { src: "./src/images/FotkaJ13.png" },
+    { src: "./src/images/FotkaJ14.png" },
+    { src: "./src/images/FotkaM15.png" },
+    { src: "./src/images/FotkaM16.png" },
   ];
 
   const gridItemStyles = {

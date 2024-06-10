@@ -3,20 +3,22 @@ import { Grid, Typography, Link as MuiLink, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import "./Footer.css";
 
 export default function Footer() {
   return (
     <>
-      <Grid 
-        container 
-        justifyContent="center" 
-        alignItems="center" 
-        spacing={2} 
-        sx={{ padding: 2 }}
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+        sx={{ padding: 2, mt: 1 }}
+        bgcolor={"#074f71"}
       >
         {/* Header */}
         <Grid item xs={12}>
-          <Typography variant="h4" align="center">
+          <Typography variant="h4" align="center" color={"white"}>
             Odkazy
           </Typography>
         </Grid>
@@ -24,28 +26,60 @@ export default function Footer() {
         {/* Links */}
         <Grid item xs={12} md={1}>
           <Typography align="center">
-            <MuiLink component={Link} to="/kontakt" sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <MuiLink
+              component={Link}
+              to="/kontakt"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                ":hover": { color: "#68a1bc" },
+              }}
+            >
               kontakt
             </MuiLink>
           </Typography>
         </Grid>
         <Grid item xs={12} md={1}>
           <Typography align="center">
-            <MuiLink component={Link} to="/galerie" sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <MuiLink
+              component={Link}
+              to="/galerie"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                ":hover": { color: "#68a1bc" },
+              }}
+            >
               galerie
             </MuiLink>
           </Typography>
         </Grid>
         <Grid item xs={12} md={1}>
           <Typography align="center">
-            <MuiLink component={Link} to="/menu" sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <MuiLink
+              component={Link}
+              to="/menu"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                ":hover": { color: "#68a1bc" },
+              }}
+            >
               jídelní lístek
             </MuiLink>
           </Typography>
         </Grid>
         <Grid item xs={12} md={1}>
           <Typography align="center">
-            <MuiLink component={Link} to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <MuiLink
+              component={Link}
+              to="/"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                ":hover": { color: "#68a1bc" },
+              }}
+            >
               domů
             </MuiLink>
           </Typography>
@@ -53,7 +87,9 @@ export default function Footer() {
 
         {/* Social Media Icons */}
         <Grid item xs={12}>
-          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 2 }}>
+          <Box
+            sx={{ display: "flex", justifyContent: "center", gap: 2, mt: 0 }}
+          >
             <MuiLink
               sx={{
                 color: "black",
@@ -79,9 +115,14 @@ export default function Footer() {
           </Box>
         </Grid>
 
-        
         <Grid item xs={12}>
-          <Typography align="center" sx={{ mt: 2 }}>
+          <Typography
+            align="center"
+            sx={{ mt: 0 }}
+            color={"white"}
+            className="footer-border"
+            fontSize={"19px"}
+          >
             © 2024 Restaurace Štěpánka. Všechna práva vyhrazena.
           </Typography>
         </Grid>
