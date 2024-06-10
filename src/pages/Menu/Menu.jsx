@@ -76,9 +76,11 @@ export default function Menu() {
           }}
         >
           <Box sx={overlayStyles}></Box>
+          <Link to="menu-jezdec">
             <Typography variant="h3" sx={textStyles}>
               STÁLÁ NABÍDKA
             </Typography>
+          </Link>
         </Grid>
         <Grid
           container
@@ -113,6 +115,7 @@ export default function Menu() {
           color={"#074f71"}
           fontFamily={"roboto"}
           textAlign={"center"}
+          className="menu-jezdec"
         >
           TÝDENNÍ NABÍDKA
         </Typography>
@@ -284,6 +287,7 @@ export default function Menu() {
           color={"#074f71"}
           fontFamily={"roboto"}
           textAlign={"center"}
+          className="menu-jezdec"
         >
           STÁLÁ NABÍDKA
         </Typography>
@@ -386,7 +390,7 @@ export default function Menu() {
           fontFamily={"roboto"}
           variant="h6"
         >
-        <Typography
+          <Typography
             pt={"5px"}
             variant="h4"
             color={"#074f71"}
@@ -404,7 +408,7 @@ export default function Menu() {
           Flat white <br /> 70,-Kč <br />
           Alžírská káva svaječným koňakem a šlehačkou <br /> 70,-Kč <br />
           Vídeňská káva <br /> 60,-Kč <br />
-          </Typography>
+        </Typography>
       </Grid>
 
       <Footer />
