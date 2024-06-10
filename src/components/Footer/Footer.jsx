@@ -180,14 +180,15 @@ export default function Footer() {
         {/* Right Side */}
         <Grid item xs={12} md={4} sx={{ textAlign: "center", marginBottom: 2 }}>
           <Typography variant="h2" sx={{ marginBottom: 2 }}></Typography>
-          <iframe
+          {/*  <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.782218503106!2d14.918391078019868!3d50.40789617158405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709550aaf85e0fd%3A0x5117c0ab2edd692!2zUmVzdGF1cmFjZSDFoHTEm3DDoW5rYQ!5e0!3m2!1sen!2scz!4v1717926325924!5m2!1sen!2scz"
             width="100%"
             height="200"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          />
+          />*/}
+          dame sem tu oteviraci dobu at to neni prazdny
         </Grid>
       </Grid>
 
