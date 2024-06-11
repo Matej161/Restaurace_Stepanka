@@ -13,7 +13,7 @@ export default function Footer() {
         justifyContent="center"
         alignItems="center"
         spacing={2}
-        sx={{ padding: 2, mt: 1 }}
+        sx={{ padding: 2, mt: 0 }}
         bgcolor={"#074f71"}
       >
         {/* Header */}

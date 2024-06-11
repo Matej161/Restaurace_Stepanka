@@ -28,7 +28,7 @@ export default function Onas() {
           md={6}
           order={{ xs: 2, md: 2 }}
           sx={{
-            backgroundImage: "url('./src/images/moderni_jidlo.jpg')",
+            backgroundImage: "url('./src/images/panikafe.jpg')",
             height: 900,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -83,7 +83,10 @@ export default function Onas() {
               Náš tým
             </Typography>
             <Typography sx={{ fontSize: "x-large", color: "#074f71" }}>
-              Prozkoumejte více o restauraci Štěpánka.
+              Jsme hrdí na to, že vytváříme inkluzivní prostředí, kde mohou naši
+              zaměstnanci ukázat své dovednosti a talent, ať už v kuchyni, nebo
+              při obsluze. Naše menu nabízí širokou škálu pokrmů, které jsou
+              připravovány s péčí a láskou našimi talentovanými kuchaři.
             </Typography>
             <Box mt={2}> </Box>
           </Box>

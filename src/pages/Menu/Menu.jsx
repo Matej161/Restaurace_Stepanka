@@ -4,14 +4,16 @@ import Footer from "../../components/Footer/Footer";
 import { useState } from "react";
 import { Grid, Box, Typography, Drawer, Button } from "@mui/material";
 import "./Menu.css";
-import { Link } from "react-scroll";
+import { useRef } from "react";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
 
   const onOpenHandler = () => setOpen(true);
   const onCloseHandler = () => setOpen(false);
-
+  const pondeliRef = useRef(null);
+  const uteryRef = useRef(null);
+  const stredaRef = useRef(null);
   const gridItemStyles = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -43,6 +45,15 @@ export default function Menu() {
     zIndex: 1,
     color: "white",
   };
+  const handleScrollToPondeli = () => {
+    pondeliRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const handleScrollToUtery = () => {
+    uteryRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const handleScrollToStreda = () => {
+    stredaRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <>
@@ -58,6 +69,7 @@ export default function Menu() {
             ...gridItemStyles,
             backgroundImage: "url('./src/images/rizek.jpg')",
           }}
+          onClick={handleScrollToPondeli}
         >
           <Box sx={overlayStyles}></Box>
           <Typography variant="h3" sx={textStyles}>
@@ -74,13 +86,13 @@ export default function Menu() {
             ...gridItemStyles,
             backgroundImage: "url('./src/images/toast.jpeg')",
           }}
+          onClick={handleScrollToUtery}
         >
           <Box sx={overlayStyles}></Box>
-          <Link to="menu-jezdec">
-            <Typography variant="h3" sx={textStyles}>
-              STÁLÁ NABÍDKA
-            </Typography>
-          </Link>
+
+          <Typography variant="h3" sx={textStyles}>
+            STÁLÁ NABÍDKA
+          </Typography>
         </Grid>
         <Grid
           container
@@ -92,9 +104,10 @@ export default function Menu() {
             ...gridItemStyles,
             backgroundImage: "url('./src/images/coffee.jpg')",
           }}
+          onClick={handleScrollToStreda}
         >
           <Box sx={overlayStyles}></Box>
-          <Typography variant="h3" sx={textStyles}>
+          <Typography ref={pondeliRef} variant="h3" sx={textStyles}>
             NÁPOJE
           </Typography>
         </Grid>
@@ -277,7 +290,8 @@ export default function Menu() {
             Hlavní chody
           </Typography>
           Roastbeef, grilovaný chřest, sýrová omáčka, pečené brambory Udon nudle
-          s kuřecím masem, zeleninou a praženým sezamem <br /> 215,- <br />
+          s kuřecím masem, zeleninou a praženým sezamem <br /> 215,-{" "}
+          <br ref={uteryRef} />
           Kachní stehenní špaličky v sous vide úpravě, krupoto s jarní cibulkou{" "}
           <br /> 185,- <br />
         </Typography>
@@ -369,7 +383,7 @@ export default function Menu() {
             Saláty
           </Typography>
           Variace listových salátů s rajčátky, s vinagretém, hovězím rostbífem a
-          opečenou bagetkou <br /> 155,- <br />
+          opečenou bagetkou <br ref={stredaRef} /> 155,- <br />
           Salát caesar-kuřecí maso, slanina, dresink, bagetka <br /> 169,-{" "}
           <br />
         </Typography>
@@ -408,6 +422,43 @@ export default function Menu() {
           Flat white <br /> 70,-Kč <br />
           Alžírská káva svaječným koňakem a šlehačkou <br /> 70,-Kč <br />
           Vídeňská káva <br /> 60,-Kč <br />
+          KAKAO <br /> 60,-Kč <br />
+          <Typography
+            pt={"5px"}
+            variant="h4"
+            color={"#074f71"}
+            fontFamily={"roboto"}
+            textAlign={"center"}
+            className="menu-border"
+          >
+            ALKOHOL
+          </Typography>
+          Bílé víno <br /> 1dl 30,-Kč <br />
+          
+          Červené víno <br /> 1dl 30,-Kč <br />
+          Sekt <br /> 250,-Kč
+          <br />
+          JÄgermeister <br /> 0,021 30,-Kč <br />
+          Pilsner Urquel <br /> 45,-Kč <br />
+          <Typography
+            pt={"5px"}
+            variant="h4"
+            color={"#074f71"}
+            fontFamily={"roboto"}
+            textAlign={"center"}
+            className="menu-border"
+          >
+            OSTATNÍ NÁPOJE
+          </Typography>
+          Minerální Voda <br /> 1dl 30,-Kč <br />
+          Birrel Světlý
+          <br /> 1dl 30,-Kč <br />
+          Coca Cola (ZERO)
+          <br /> 45,-Kč 35,-Kč <br />
+          Čaj zelený, černý, ovocný <br /> 35,-Kč <br />
+          Čaj-Zázvor, Máta <br /> 35,-Kč <br />
+          Džus dle nabídky <br /> 45,-Kč <br />
+         
         </Typography>
       </Grid>
 

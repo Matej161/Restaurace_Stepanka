@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box } from "@mui/material";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { Thumbnails } from 'yet-another-react-lightbox/plugins';
+import { Thumbnails } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Footer from "../../components/Footer/Footer";
-import "./Galerie.css"
+import "./Galerie.css";
 
 export default function Galerie() {
   const [open, setOpen] = React.useState(false);
@@ -73,29 +73,39 @@ export default function Galerie() {
   return (
     <>
       <Navbar />
-      <Grid container justifyContent={'center'} sx={{ marginTop: 10, marginBottom: 3 }}>
-        <Grid container
+      <Grid
+        container
+        justifyContent={"center"}
+        sx={{ marginTop: 0 }}
+      >
+        <Grid
+          container
           md={12}
           spacing={3}
           sx={{
             padding: 2,
             background: "white",
             borderRadius: 2,
-            justifyContent: 'center'
-          }}>
+            justifyContent: "center",
+          }}
+        >
           <Grid item xs={12}>
-            <Typography fontSize={"50px"} className='galerie-nadpis'>Galerie</Typography>
+            <Typography fontSize={"50px"} className="galerie-nadpis">
+              Galerie
+            </Typography>
           </Grid>
           {images.map((image, index) => (
             <Grid
               item
-              xs={11.9} sm={5.9} lg={2.9}
+              xs={11.9}
+              sm={5.9}
+              lg={2.9}
               key={index}
               sx={{
                 ...gridItemStyles,
                 backgroundImage: `url(${image.src})`,
                 backgroundColor: index % 2 === 0 ? "#e3f2fd" : "#fce4ec",
-                margin: 1
+                margin: 1,
               }}
               onClick={() => {
                 setCurrentIndex(index);

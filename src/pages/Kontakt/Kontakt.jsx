@@ -27,7 +27,7 @@ export default function Kontakt() {
     left: 0,
     right: 0,
     bottom: 0,
-    
+
     zIndex: 1,
   };
 
@@ -37,7 +37,7 @@ export default function Kontakt() {
     textAlign: "center",
     margin: 0,
     padding: "0 20px",
-    boxShadow: "black"
+    boxShadow: "black",
   };
 
   return (
@@ -61,9 +61,10 @@ export default function Kontakt() {
           }}
         >
           <Box sx={overlayStyles}></Box>
-          <Typography variant="h3" sx={textStyles} fontFamily={"outfit"}>
+          {/* <Typography variant="h3" sx={textStyles} fontFamily={"outfit"}>
             Jak nás najdete?
           </Typography>
+          */}
         </Grid>
       </Grid>
 
@@ -127,18 +128,18 @@ export default function Kontakt() {
           >
             <Box
               sx={{
-                display: "flex", 
-                justifyContent: "center", 
+                display: "flex",
+                justifyContent: "center",
                 alignItems: "center",
                 height: "100%",
-                overflow: "hidden", 
+                overflow: "hidden",
               }}
             >
               <Box
                 sx={{
-                  overflowY: "auto", 
+                  overflowY: "auto",
                   width: "100%",
-                  maxHeight: { xs: "300px", md: "auto" }, 
+                  maxHeight: { xs: "300px", md: "auto" },
                 }}
               >
                 <ScheduleTable />
