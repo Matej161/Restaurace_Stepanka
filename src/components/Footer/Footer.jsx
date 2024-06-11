@@ -92,7 +92,7 @@ export default function Footer() {
           >
             <MuiLink
               sx={{
-                color: "black",
+                color: "white",
                 ":hover": {
                   color: "violet",
                 },
@@ -103,7 +103,7 @@ export default function Footer() {
             </MuiLink>
             <MuiLink
               sx={{
-                color: "black",
+                color: "white",
                 ":hover": {
                   color: "blue",
                 },

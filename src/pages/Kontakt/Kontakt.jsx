@@ -110,7 +110,8 @@ export default function Kontakt() {
                 fontFamily={"outfit"}
               >
                 Na Celně 885, 293 01 <br /> Mladá Boleslav III <br /> Klinika
-                Dr. Pírka
+                Dr. Pírka <br />
+                704 704 334
               </Typography>
             </Box>
           </Grid>

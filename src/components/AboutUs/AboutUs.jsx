@@ -170,7 +170,7 @@ export default function AboutUs() {
           md={6}
           order={{ xs: 2, md: 2 }}
           sx={{
-            backgroundImage: "url('./src/images/moderni_jidlo.jpg')",
+            backgroundImage: "url('./src/images/stepanka-1.jpg')",
             height: 900,
             backgroundSize: "cover",
             backgroundPosition: "center"
