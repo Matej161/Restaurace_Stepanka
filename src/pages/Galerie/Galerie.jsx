@@ -90,7 +90,7 @@ export default function Galerie() {
           }}
         >
           <Grid item xs={12}>
-            <Typography fontSize={"50px"} className="galerie-nadpis">
+            <Typography fontSize={"20px"} className="galerie-nadpis" color={"white"} >
               Galerie
             </Typography>
           </Grid>

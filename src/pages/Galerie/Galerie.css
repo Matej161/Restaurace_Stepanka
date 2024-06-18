@@ -1,7 +1,7 @@
 .galerie-nadpis {
   display: flex;
   justify-content: center;
-  background: linear-gradient(to right, white, #074f71, white);
-  color: white;
+  
+  color: transparent;
   transition: 1s;
 }
